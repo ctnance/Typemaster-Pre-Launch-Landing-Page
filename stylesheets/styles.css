@@ -1,3 +1,137 @@
+html {
+  box-sizing: border-box; }
 
+html, body {
+  height: 100%;
+  margin: 0; }
+
+body {
+  font-family: Barlow, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  max-width: 480px;
+  margin: auto;
+  padding: 24px; }
+
+* {
+  box-sizing: inherit; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #162542;
+  margin: 0; }
+
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.5rem; }
+
+p {
+  color: #7B8BAD;
+  font-weight: 500;
+  line-height: 26px; }
+
+span {
+  color: #7B8BAD;
+  font-weight: 700; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem; }
+
+footer {
+  text-align: center;
+  margin-bottom: 3.125rem; }
+
+button {
+  border: none;
+  border-radius: 0.5rem;
+  font-family: Barlow;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 9.375rem;
+  height: 3rem; }
+
+.introduction {
+  margin-bottom: 4rem; }
+  .introduction p {
+    margin: 32px 0; }
+  .introduction span {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 1rem; }
+  .introduction .pre-order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+
+.product-description {
+  text-align: center;
+  margin-bottom: 6.9375rem; }
+  .product-description h2 {
+    max-width: 68%;
+    margin: auto; }
+  .product-description p {
+    margin: 1.5rem 0 0; }
+
+.features {
+  text-align: center;
+  margin-bottom: 6rem; }
+  .features p:last-child {
+    margin-bottom: 0; }
+  .features .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem; }
+    .features .feature .icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #F16718;
+      border-radius: 1rem;
+      width: 65px;
+      height: 65px;
+      margin-bottom: 3rem; }
+    .features .feature .feature-icon {
+      width: 100%; }
+    .features .feature .compatible-icon {
+      width: 25.14px;
+      height: 20.24px; }
+    .features .feature .bluetooth-icon {
+      width: 17.68px;
+      height: 27.86px; }
+    .features .feature .battery-icon {
+      width: 31.99px;
+      height: 20px; }
+    .features .feature .light-icon {
+      width: 32px;
+      height: 32px; }
+    .features .feature h3 {
+      width: 60%; }
+    .features .feature p {
+      margin-top: 1.5rem; }
+
+.btn-orange {
+  background-color: #F16718;
+  color: #FFF; }
+
+.btn-orange:hover {
+  background-color: #FF9B62; }
+
+.btn-gray {
+  background-color: #E8EFF2;
+  color: #162542; }
+
+.btn-gray:hover {
+  background-color: #162542;
+  color: #FFF; }
 
 /*# sourceMappingURL=styles.css.map */
