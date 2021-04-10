@@ -36,6 +36,12 @@ body {
     font-size: 16px;
     max-width: 480px;
     margin: auto;
+
+    // @media #{$tablet-size} {
+    //     body {
+    //         background-color: red;
+    //     }
+    // }
 }
 
 * {
@@ -139,7 +145,8 @@ button {
 }
 
 .keyboard-img {
-    background: url(../assets/mobile/image-keyboard.jpg) no-repeat cover;
+    background: url(../assets/mobile/image-keyboard.jpg) no-repeat;
+    background-size: cover;
     height: 331px;
     border-radius: 1rem;
     transform: translateX(1.5rem);
@@ -147,7 +154,8 @@ button {
 }
 
 .phone-keyboard-img {
-    background: $dark-orange url(../assets/mobile/image-phone-and-keyboard.jpg) no-repeat cover;
+    background: $dark-orange url(../assets/mobile/image-phone-and-keyboard.jpg) no-repeat;
+    background-size: cover;
     background-blend-mode: multiply;
     width: 129px;
     height: 193px;
@@ -156,7 +164,8 @@ button {
 }
 
 .glass-keyboard-img {
-    background: url(../assets/mobile/image-glass-and-keyboard.jpg) no-repeat cover;
+    background: url(../assets/mobile/image-glass-and-keyboard.jpg) no-repeat;
+    background-size: cover;
     width: 220px;
     height: 193px;
     border-radius: 1rem;

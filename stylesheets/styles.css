@@ -99,9 +99,7 @@ button {
   margin-bottom: 1.5rem; }
 
 .phone-keyboard-img {
-  background-color: #f16718;
-  background-image: url(../assets/mobile/image-phone-and-keyboard.jpg);
-  background-repeat: no-repeat;
+  background: #f16718 url(../assets/mobile/image-phone-and-keyboard.jpg) no-repeat;
   background-size: cover;
   background-blend-mode: multiply;
   width: 129px;
