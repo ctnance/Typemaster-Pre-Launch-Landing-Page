@@ -1,7 +1,8 @@
 html {
   box-sizing: border-box; }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0; }
 
@@ -9,13 +10,17 @@ body {
   font-family: Barlow, Arial, Helvetica, sans-serif;
   font-size: 16px;
   max-width: 480px;
-  margin: auto;
-  padding: 24px; }
+  margin: auto; }
 
 * {
   box-sizing: inherit; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 900;
   text-transform: uppercase;
   color: #162542;
@@ -31,23 +36,32 @@ h3 {
   font-size: 1.5rem; }
 
 p {
-  color: #7B8BAD;
+  color: #7b8bad;
   font-weight: 500;
   line-height: 26px; }
 
+img {
+  max-width: 100%;
+  height: auto; }
+
 span {
-  color: #7B8BAD;
+  color: #7b8bad;
   font-weight: 700; }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  padding: 24px; }
+
+section {
+  padding: 24px; }
 
 footer {
   text-align: center;
-  margin-bottom: 3.125rem; }
+  margin-bottom: 3.125rem;
+  padding: 24px; }
 
 button {
   border: none;
@@ -72,6 +86,36 @@ button {
     justify-content: space-between;
     align-items: center; }
 
+.img-container-two {
+  display: flex;
+  margin-bottom: 4.6875rem; }
+
+.keyboard-img {
+  background: url(../assets/mobile/image-keyboard.jpg) no-repeat;
+  background-size: cover;
+  height: 331px;
+  border-radius: 1rem;
+  transform: translateX(1.5rem);
+  margin-bottom: 1.5rem; }
+
+.phone-keyboard-img {
+  background-color: #f16718;
+  background-image: url(../assets/mobile/image-phone-and-keyboard.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: multiply;
+  width: 129px;
+  height: 193px;
+  border-radius: 1rem;
+  transform: translateX(-1.375rem); }
+
+.glass-keyboard-img {
+  background: url(../assets/mobile/image-glass-and-keyboard.jpg) no-repeat;
+  background-size: cover;
+  width: 220px;
+  height: 193px;
+  border-radius: 1rem; }
+
 .product-description {
   text-align: center;
   margin-bottom: 6.9375rem; }
@@ -95,7 +139,7 @@ button {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #F16718;
+      background-color: #f16718;
       border-radius: 1rem;
       width: 65px;
       height: 65px;
@@ -120,18 +164,18 @@ button {
       margin-top: 1.5rem; }
 
 .btn-orange {
-  background-color: #F16718;
-  color: #FFF; }
+  background-color: #f16718;
+  color: #fff; }
 
 .btn-orange:hover {
-  background-color: #FF9B62; }
+  background-color: #ff9b62; }
 
 .btn-gray {
-  background-color: #E8EFF2;
+  background-color: #e8eff2;
   color: #162542; }
 
 .btn-gray:hover {
   background-color: #162542;
-  color: #FFF; }
+  color: #fff; }
 
 /*# sourceMappingURL=styles.css.map */
