@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+// Tasks: 
+// * Fix Margin variables
+// * Make logo icon animate on hover
+
 // ***************
 // ** VARIABLES **
 // ***************
@@ -7,6 +11,10 @@
 // Media Query Screen Sizes
 $tablet-size: "screen and (min-width: 768px)";
 $desktop-size: "screen and (min-width: 1440px)";
+
+// @media #{$tablet-size} {
+        
+// }
 
 // Colors
 $dark-orange: #f16718;
@@ -16,6 +24,10 @@ $light-blue: #7b8bad;
 $light-gray: #e8eff2;
 $white: #fff;
 
+// Margin Values
+$mobile-padding: 1.5rem;
+$tablet-padding: 2.5rem;
+
 // ************
 // ** STYLES **
 // ************
@@ -23,10 +35,12 @@ $white: #fff;
 // HTML Styles
 html {
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 html,
 body {
+    width: 100vw;
     height: 100%;
     margin: 0;
 }
@@ -34,14 +48,13 @@ body {
 body {
     font-family: Barlow, Arial, Helvetica, sans-serif;
     font-size: 16px;
-    max-width: 480px;
+    max-width: 500px;
     margin: auto;
 
-    // @media #{$tablet-size} {
-    //     body {
-    //         background-color: red;
-    //     }
-    // }
+    @media #{$tablet-size} {
+        margin: 0;
+        max-width: none;
+    }
 }
 
 * {
@@ -93,17 +106,34 @@ header {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 4rem;
-    padding: 24px;
+    padding: $mobile-padding;
+
+    @media #{$tablet-size} {
+        width: 100%;
+        padding: $tablet-padding;
+    }
 }
 
+// main {
+//     // overflow-x: hidden;
+// }
+
 section {
-    padding: 24px;
+    padding: 0 $mobile-padding;
+
+    @media #{$tablet-size} {
+        padding: 0 0 0 $tablet-padding;
+    }
 }
 
 footer {
     text-align: center;
     margin-bottom: 3.125rem;
-    padding: 24px;
+    padding: $mobile-padding;
+
+    @media #{$tablet-size} {
+        padding-bottom: $tablet-padding;
+    }
 }
 
 button {
@@ -118,6 +148,100 @@ button {
 }
 
 // Custom Styles
+
+// main {
+//     max-width: 1110px;
+//     margin: auto;
+//     // FIX PADDING TO BE HERE RATHER THAN OTHER ELEMENTS (SHOULD FIX SPACING ISSUES)
+
+//     //GRID STYLES HERE
+//     @media #{$desktop-size} {
+//         display: grid;
+//         // grid-template-columns: repeat(4, 1fr);
+//         // grid-auto-rows: repeat(5, minmax(100px, auto));
+//         grid-template-areas: 
+//             "hd"    "hd"    "hd"    "hd"
+//             "main" "main" "main"  "main"
+//             "img2"  "img2"  "img2"  "prod-desc"
+//             "feats" "feats" "feats" "feats"
+//             "ft"    "ft"    "ft"    "ft";
+//     }
+
+//     main {
+//         @media #{$desktop-size} {
+//             margin-bottom: 0;
+//             grid-area: main;
+//         }
+//     }
+
+//     .img-container-one {
+//         @media #{$desktop-size} {
+//             grid-area: img1;
+//         }
+//     }
+
+//     .img-container-two {
+//         @media #{$desktop-size} {
+//             grid-area: img2;
+//         }
+//     }
+
+//     .product-description {
+//         @media #{$desktop-size} {
+//             grid-area: prod-desc;
+//         }
+//     }
+
+//     .features {
+//         @media #{$desktop-size} {
+//             grid-area: feats;
+//         }
+//     }
+// }
+
+.page-container {
+    @media #{$desktop-size} {
+        max-width: 1110px;
+        margin: 0 auto;
+    }
+}
+
+.intro-grid-container {
+    @media #{$tablet-size} {
+        display: grid;
+        grid-template-columns: minmax(378px, 1fr) 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    @media #{$desktop-size} {
+        position: relative;
+        top: 0;
+        left: 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        .introduction {
+            grid-column: 1 / span 2;
+        }
+
+        .img-container-one {
+            grid-column: 3 / span 2;
+            justify-self: end;
+        }
+
+        .img-container-two {
+            grid-column: 1 / span 3;
+            max-width: 730px;
+        }
+
+        .product-description {
+            grid-column: 4;
+            grid-row: 2;
+            align-self: center;
+            flex-direction: column;
+        }
+    }
+}
 
 .introduction {
     margin-bottom: 4rem;
@@ -137,11 +261,30 @@ button {
         justify-content: space-between;
         align-items: center;
     }
+
+    @media #{$tablet-size} {
+        padding-top: 3.75rem;
+        max-width: 480px;
+    }
+
+    @media #{$desktop-size} {
+        max-width: 445px;
+        padding-left: 0;
+    }
 }
 
-.img-container-two {
-    display: flex;
-    margin-bottom: 4.6875rem;
+.introduction::after {
+    @media #{$desktop-size} {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(285px);
+        content: "";
+        border-radius: 1rem;
+        background: url(../assets/shared/pattern-square.svg) no-repeat;
+        width: 255px;
+        height: 240px;
+    }
 }
 
 .keyboard-img {
@@ -151,24 +294,95 @@ button {
     border-radius: 1rem;
     transform: translateX(1.5rem);
     margin-bottom: 1.5rem;
+
+    @media #{$tablet-size} {
+        background-image: url(../assets/tablet/image-keyboard.jpg);
+        width: 478px;
+        height: 425px;
+        transform: translateX(3rem);
+    }
+
+    @media #{$desktop-size} {
+        width: 540px;
+        height: 480px;
+        transform: translateX(0);
+    }
 }
 
-.phone-keyboard-img {
-    background: $dark-orange url(../assets/mobile/image-phone-and-keyboard.jpg) no-repeat;
-    background-size: cover;
-    background-blend-mode: multiply;
-    width: 129px;
-    height: 193px;
-    border-radius: 1rem;
-    transform: translateX(-1.375rem);
-}
+.img-container-two {
+    display: flex;
+    margin-bottom: 4.6875rem;
 
-.glass-keyboard-img {
-    background: url(../assets/mobile/image-glass-and-keyboard.jpg) no-repeat;
-    background-size: cover;
-    width: 220px;
-    height: 193px;
-    border-radius: 1rem;
+    @media #{$tablet-size} {
+        grid-column: span 2;
+    }
+    
+    @media #{$desktop-size} {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    .phone-keyboard-img {
+        background: $dark-orange url(../assets/mobile/image-phone-and-keyboard.jpg) no-repeat;
+        background-size: cover;
+        background-blend-mode: multiply;
+        width: 129px;
+        height: 193px;
+        border-radius: 1rem;
+        transform: translateX(-1.375rem);
+
+        @media #{$tablet-size} {
+            background-image: url(../assets/tablet/image-phone-and-keyboard.jpg);
+            width: 214px;
+            height: 320px;
+            transform: none;
+            margin: 0 $tablet-padding 0 30px;
+        }
+
+        @media #{$desktop-size} {
+            background-image: url(../assets/desktop/image-phone-and-keyboard.jpg);
+            width: 255px;
+            height: 480px;
+            margin: 0 1.875rem 0 0;
+        }
+    }
+
+    .phone-keyboard-img::after {
+        @media #{$desktop-size} {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transform: translateX(-285px);
+            content: "";
+            border-radius: 1rem;
+            background: url(../assets/shared/pattern-square.svg) no-repeat;
+            width: 255px;
+            height: 240px;
+            z-index: 10;
+        }
+    }
+    
+    .glass-keyboard-img {
+        background: url(../assets/mobile/image-glass-and-keyboard.jpg) no-repeat;
+        background-size: cover;
+        width: 220px;
+        height: 193px;
+        border-radius: 1rem;
+
+        @media #{$tablet-size} {
+            background-image: url(../assets/tablet/image-glass-and-keyboard.jpg);
+            width: 445px;
+            height: 320px;
+        }
+
+        @media #{$desktop-size} {
+            background-image: url(../assets/desktop/image-glass-and-keyboard.jpg);
+            width: 445px;
+            height: 480px;
+            margin: 0 1.875rem 0 0;
+        }
+    }
 }
 
 .product-description {
@@ -183,11 +397,66 @@ button {
     p {
         margin: 1.5rem 0 0;
     }
+
+    @media #{$tablet-size} {
+        grid-column: 1 / span 2;
+        display: flex;
+        text-align: left;
+        align-items: center;
+        justify-content: flex-start;
+        
+        h2 {
+            width: 255px;
+            // max-width: 320px;
+            margin: 0;
+            text-align: left;
+        }
+
+        p {
+            width: 474px;
+            // max-width: 438px;
+            margin: 0;
+            padding: 0 2.25rem 0 2.5rem;
+        }
+    }
+
+    @media #{$desktop-size} {
+        max-width: 255px;
+        padding-left: 0;
+
+            h2 {
+                width: auto;
+                max-width: none;
+            }
+
+            p {
+                width: auto;
+                max-width: none;
+                padding: 0;
+                margin-top: 1.75rem;
+            }
+    }
 }
 
 .features {
     text-align: center;
     margin-bottom: 6rem;
+    padding: 0 1.5rem;
+
+    @media #{$tablet-size} {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: $tablet-padding;
+        margin-bottom: 8.875rem;
+        padding: 0;
+    }
+
+    @media #{$desktop-size} {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        margin-left: 0;
+        margin-bottom: 8rem;
+    }
 
     p:last-child {
         margin-bottom: 0;
@@ -199,6 +468,18 @@ button {
         align-items: center;
         margin-bottom: 4rem;
 
+        @media #{$tablet-size} {
+            text-align: left;
+            align-items: flex-start;
+            align-content: left;
+            justify-content: flex-start;
+            max-width: 281px;
+
+            h3 {
+                flex: 1;
+            }
+        }
+
         .icon-container {
             display: flex;
             justify-content: center;
@@ -208,6 +489,14 @@ button {
             width: 65px;
             height: 65px;
             margin-bottom: 3rem;
+
+            @media #{$tablet-size} {
+                margin-bottom: $tablet-padding;
+            }
+
+            @media #{$desktop-size} {
+                margin-bottom: 3rem;
+            }
         }
 
         .feature-icon {
@@ -251,7 +540,7 @@ button {
     color: $white;
 }
 
-.btn-orange:hover {
+.btn-orange:hover,.btn-orange:active {
     background-color: $light-orange;
 }
 
@@ -260,7 +549,7 @@ button {
     color: $dark-blue;
 }
 
-.btn-gray:hover {
+.btn-gray:hover, .btn-gray:active {
     background-color: $dark-blue;
     color: $white;
 }

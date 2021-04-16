@@ -1,0 +1,286 @@
+html {
+  box-sizing: border-box;
+  overflow-x: hidden; }
+
+html,
+body {
+  width: 100vw;
+  height: 100%;
+  margin: 0; }
+
+body {
+  font-family: Barlow, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  max-width: 500px;
+  margin: auto; }
+  @media screen and (min-width: 768px) {
+    body {
+      margin: 0;
+      max-width: none; } }
+
+* {
+  box-sizing: inherit; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #162542;
+  margin: 0; }
+
+h1 {
+  font-size: 3rem; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.5rem; }
+
+p {
+  color: #7b8bad;
+  font-weight: 500;
+  line-height: 26px; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+span {
+  color: #7b8bad;
+  font-weight: 700; }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4rem;
+  padding: 1.5rem; }
+  @media screen and (min-width: 768px) {
+    header {
+      width: 100%;
+      padding: 2.5rem; } }
+
+section {
+  padding: 0 1.5rem; }
+  @media screen and (min-width: 768px) {
+    section {
+      padding: 0 0 0 2.5rem; } }
+
+footer {
+  text-align: center;
+  margin-bottom: 3.125rem;
+  padding: 1.5rem; }
+  @media screen and (min-width: 768px) {
+    footer {
+      padding-bottom: 2.5rem; } }
+
+button {
+  border: none;
+  border-radius: 0.5rem;
+  font-family: Barlow;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  width: 9.375rem;
+  height: 3rem; }
+
+@media screen and (min-width: 768px) {
+  .intro-grid-container {
+    grid-template-columns: minmax(378px, 1fr) 1fr;
+    grid-template-rows: 1fr 1fr; } }
+@media screen and (min-width: 1440px) {
+  .intro-grid-container {
+    display: block; } }
+
+.introduction {
+  margin-bottom: 4rem; }
+  .introduction p {
+    margin: 32px 0; }
+  .introduction span {
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 1rem; }
+  .introduction .pre-order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  @media screen and (min-width: 768px) {
+    .introduction {
+      padding-top: 3.75rem; } }
+
+.introduction::after {
+  content: "";
+  background: url(../../assets/shared/pattern-square.svg) no-repeat;
+  width: 255px;
+  height: 240px; }
+
+.keyboard-img {
+  background: url(../assets/mobile/image-keyboard.jpg) no-repeat;
+  background-size: cover;
+  height: 331px;
+  border-radius: 1rem;
+  transform: translateX(1.5rem);
+  margin-bottom: 1.5rem; }
+  @media screen and (min-width: 768px) {
+    .keyboard-img {
+      background-image: url(../assets/tablet/image-keyboard.jpg);
+      width: 478px;
+      height: 425px;
+      transform: translateX(3rem); } }
+
+.img-container-two {
+  display: flex;
+  margin-bottom: 4.6875rem; }
+  @media screen and (min-width: 768px) {
+    .img-container-two {
+      grid-column: span 2; } }
+  .img-container-two .phone-keyboard-img {
+    background: #f16718 url(../assets/mobile/image-phone-and-keyboard.jpg) no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    width: 129px;
+    height: 193px;
+    border-radius: 1rem;
+    transform: translateX(-1.375rem); }
+    @media screen and (min-width: 768px) {
+      .img-container-two .phone-keyboard-img {
+        background-image: url(../assets/tablet/image-phone-and-keyboard.jpg);
+        width: 214px;
+        height: 320px;
+        transform: none;
+        margin: 0 2.5rem 0 30px; } }
+    @media screen and (min-width: 1440px) {
+      .img-container-two .phone-keyboard-img {
+        background-image: url(../assets/desktop/image-phone-and-keyboard.jpg);
+        width: 255px;
+        height: 480px;
+        margin: 0 1.875rem 0 0; } }
+  .img-container-two .glass-keyboard-img {
+    background: url(../assets/mobile/image-glass-and-keyboard.jpg) no-repeat;
+    background-size: cover;
+    width: 220px;
+    height: 193px;
+    border-radius: 1rem; }
+    @media screen and (min-width: 768px) {
+      .img-container-two .glass-keyboard-img {
+        background-image: url(../assets/tablet/image-glass-and-keyboard.jpg);
+        width: 445px;
+        height: 320px; } }
+    @media screen and (min-width: 1440px) {
+      .img-container-two .glass-keyboard-img {
+        background-image: url(../assets/desktop/image-glass-and-keyboard.jpg);
+        width: 445px;
+        height: 480px;
+        margin: 0 1.875rem 0 0; } }
+
+.product-description {
+  text-align: center;
+  margin-bottom: 6.9375rem;
+  background-color: red; }
+  .product-description h2 {
+    max-width: 68%;
+    margin: auto; }
+  .product-description p {
+    margin: 1.5rem 0 0; }
+  @media screen and (min-width: 768px) {
+    .product-description {
+      grid-column: 1 / span 2;
+      display: flex;
+      text-align: left;
+      align-items: center;
+      justify-content: space-between; }
+      .product-description h2 {
+        max-width: 320px;
+        margin: 0;
+        text-align: left; }
+      .product-description p {
+        max-width: 438px;
+        margin: 0;
+        padding-right: 2.5rem; } }
+
+.features {
+  text-align: center;
+  margin-bottom: 6rem;
+  padding: 0 1.5rem; }
+  @media screen and (min-width: 768px) {
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-left: 2.5rem;
+      margin-bottom: 8.875rem;
+      padding: 0; } }
+  @media screen and (min-width: 1440px) {
+    .features {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px; } }
+  .features p:last-child {
+    margin-bottom: 0; }
+  .features .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem; }
+    @media screen and (min-width: 768px) {
+      .features .feature {
+        text-align: left;
+        align-items: flex-start;
+        align-content: left;
+        justify-content: flex-start;
+        max-width: 281px; }
+        .features .feature h3 {
+          flex: 1; } }
+    .features .feature .icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f16718;
+      border-radius: 1rem;
+      width: 65px;
+      height: 65px;
+      margin-bottom: 3rem; }
+      @media screen and (min-width: 768px) {
+        .features .feature .icon-container {
+          margin-bottom: 2.5rem; } }
+      @media screen and (min-width: 1440px) {
+        .features .feature .icon-container {
+          margin-bottom: 3rem; } }
+    .features .feature .feature-icon {
+      width: 100%; }
+    .features .feature .compatible-icon {
+      width: 25.14px;
+      height: 20.24px; }
+    .features .feature .bluetooth-icon {
+      width: 17.68px;
+      height: 27.86px; }
+    .features .feature .battery-icon {
+      width: 31.99px;
+      height: 20px; }
+    .features .feature .light-icon {
+      width: 32px;
+      height: 32px; }
+    .features .feature h3 {
+      width: 60%; }
+    .features .feature p {
+      margin-top: 1.5rem; }
+
+.btn-orange {
+  background-color: #f16718;
+  color: #fff; }
+
+.btn-orange:hover, .btn-orange:active {
+  background-color: #ff9b62; }
+
+.btn-gray {
+  background-color: #e8eff2;
+  color: #162542; }
+
+.btn-gray:hover, .btn-gray:active {
+  background-color: #162542;
+  color: #fff; }
+
+/*# sourceMappingURL=styles.css.map */
