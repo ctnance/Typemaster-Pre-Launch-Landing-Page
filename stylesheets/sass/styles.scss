@@ -112,6 +112,10 @@ header {
         width: 100%;
         padding: $tablet-padding;
     }
+
+    @media #{$desktop-size} {
+        padding: 55px 0 0; // PADDING IS USED A LOT HERE--CAN WE SWITCH TO MARGIN? EFFECIENCY IMPORTANT
+    }
 }
 
 // main {
@@ -146,58 +150,6 @@ button {
     width: 9.375rem;
     height: 3rem;
 }
-
-// Custom Styles
-
-// main {
-//     max-width: 1110px;
-//     margin: auto;
-//     // FIX PADDING TO BE HERE RATHER THAN OTHER ELEMENTS (SHOULD FIX SPACING ISSUES)
-
-//     //GRID STYLES HERE
-//     @media #{$desktop-size} {
-//         display: grid;
-//         // grid-template-columns: repeat(4, 1fr);
-//         // grid-auto-rows: repeat(5, minmax(100px, auto));
-//         grid-template-areas: 
-//             "hd"    "hd"    "hd"    "hd"
-//             "main" "main" "main"  "main"
-//             "img2"  "img2"  "img2"  "prod-desc"
-//             "feats" "feats" "feats" "feats"
-//             "ft"    "ft"    "ft"    "ft";
-//     }
-
-//     main {
-//         @media #{$desktop-size} {
-//             margin-bottom: 0;
-//             grid-area: main;
-//         }
-//     }
-
-//     .img-container-one {
-//         @media #{$desktop-size} {
-//             grid-area: img1;
-//         }
-//     }
-
-//     .img-container-two {
-//         @media #{$desktop-size} {
-//             grid-area: img2;
-//         }
-//     }
-
-//     .product-description {
-//         @media #{$desktop-size} {
-//             grid-area: prod-desc;
-//         }
-//     }
-
-//     .features {
-//         @media #{$desktop-size} {
-//             grid-area: feats;
-//         }
-//     }
-// }
 
 .page-container {
     @media #{$desktop-size} {
