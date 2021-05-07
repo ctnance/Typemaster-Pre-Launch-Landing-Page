@@ -82,7 +82,8 @@ header {
 }
 @media screen and (min-width: 1440px) {
   header {
-    padding: 55px 0 0;
+    margin-bottom: 0;
+    padding: 55px 0 5.375rem;
   }
 }
 
@@ -97,12 +98,20 @@ section {
 
 footer {
   text-align: center;
-  margin-bottom: 3.125rem;
-  padding: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+footer p {
+  margin: 0;
 }
 @media screen and (min-width: 768px) {
   footer {
     padding-bottom: 2.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  footer {
+    margin-bottom: 2.5rem;
+    padding: 0;
   }
 }
 
@@ -138,17 +147,23 @@ button {
     left: 0;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    row-gap: 30px;
   }
   .intro-grid-container .introduction {
     grid-column: 1 / span 2;
+    height: 480px;
+    margin-bottom: 0;
   }
   .intro-grid-container .img-container-one {
     grid-column: 3 / span 2;
     justify-self: end;
+    height: 480px;
   }
   .intro-grid-container .img-container-two {
     grid-column: 1 / span 3;
     max-width: 730px;
+    height: 480px;
+    margin-bottom: 0;
   }
   .intro-grid-container .product-description {
     grid-column: 4;
@@ -184,6 +199,15 @@ button {
   .introduction {
     max-width: 445px;
     padding-left: 0;
+  }
+  .introduction p {
+    font-size: 18px;
+  }
+  .introduction .pre-order {
+    justify-content: flex-start;
+  }
+  .introduction .pre-order span {
+    margin-left: 2.5rem;
   }
 }
 
@@ -369,8 +393,7 @@ button {
   .features {
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    margin-left: 0;
-    margin-bottom: 8rem;
+    margin: 10.5rem 0 8rem;
   }
 }
 .features p:last-child {

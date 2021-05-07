@@ -12,10 +12,6 @@
 $tablet-size: "screen and (min-width: 768px)";
 $desktop-size: "screen and (min-width: 1440px)";
 
-// @media #{$tablet-size} {
-        
-// }
-
 // Colors
 $dark-orange: #f16718;
 $light-orange: #ff9b62;
@@ -114,13 +110,10 @@ header {
     }
 
     @media #{$desktop-size} {
-        padding: 55px 0 0; // PADDING IS USED A LOT HERE--CAN WE SWITCH TO MARGIN? EFFECIENCY IMPORTANT
+        margin-bottom: 0;
+        padding: 55px 0 5.375rem; // PADDING IS USED A LOT HERE--CAN WE SWITCH TO MARGIN? EFFECIENCY IMPORTANT
     }
 }
-
-// main {
-//     // overflow-x: hidden;
-// }
 
 section {
     padding: 0 $mobile-padding;
@@ -132,11 +125,19 @@ section {
 
 footer {
     text-align: center;
-    margin-bottom: 3.125rem;
-    padding: $mobile-padding;
+    padding-bottom: $mobile-padding;
+
+    p {
+        margin: 0;
+    }
 
     @media #{$tablet-size} {
         padding-bottom: $tablet-padding;
+    }
+
+    @media #{$desktop-size} {
+        margin-bottom: 2.5rem;
+        padding: 0;
     }
 }
 
@@ -171,19 +172,26 @@ button {
         left: 0;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        row-gap: 30px;
 
         .introduction {
             grid-column: 1 / span 2;
+            height: 480px;
+            margin-bottom: 0;
         }
 
         .img-container-one {
             grid-column: 3 / span 2;
             justify-self: end;
+            height: 480px;
         }
 
         .img-container-two {
             grid-column: 1 / span 3;
             max-width: 730px;
+            height: 480px;
+            // margin-bottom: 10.5rem;
+            margin-bottom: 0;
         }
 
         .product-description {
@@ -222,6 +230,18 @@ button {
     @media #{$desktop-size} {
         max-width: 445px;
         padding-left: 0;
+
+        p {
+            font-size: 18px;
+        }
+
+        .pre-order {
+            justify-content: flex-start;
+
+            span {
+                margin-left: 2.5rem;
+            }
+        }
     }
 }
 
@@ -406,8 +426,9 @@ button {
     @media #{$desktop-size} {
         grid-template-columns: repeat(4, 1fr);
         gap: 30px;
-        margin-left: 0;
-        margin-bottom: 8rem;
+        // margin-left: 0;
+        // margin-bottom: 8rem;
+        margin: 10.5rem 0 8rem;
     }
 
     p:last-child {
